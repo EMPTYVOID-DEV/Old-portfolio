@@ -1,0 +1,153 @@
+
+@keyframes SlideUp {
+    0%{
+        height: 0;
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+        height:clamp(36px,calc(28px+2.5vw),54px) ;
+    }
+}
+
+
+@keyframes coloring {
+    0%{
+        background-position: 0% center;
+    }
+    100%{
+        background-position:-200% center;
+    }
+}
+@keyframes ShowUp {
+    0%{
+       transform: translateY(-320px) rotateY(-13deg);
+    }
+    100%{
+        transform: translateY(0) rotateY(-13deg);
+    }
+}
+
+
+
+.Home{
+   background-color: #4801ff;
+   position: absolute;
+   top: 0;
+   left: 0;
+   /* background-color: rgb(153, 9, 9); */
+   /* background-image: url("../../../assets/images/universe.jpg"); */
+   /* background-size: cover;
+   background-repeat: no-repeat; */
+   padding:40px 0 10px 2%;
+   display: grid;
+   grid-template-columns: 46% 54%;
+   width: 100vw;
+   height: 100vh;
+   overflow: hidden;
+}
+.Leftside{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap:20px;
+    height: 90%;
+}
+.Leftside >div:first-child{
+    margin-block: auto;
+    background:linear-gradient(to right,white,black,white);
+    background-clip: text;
+    -webkit-background-clip:text;
+    background-size: 200%;
+    animation: coloring 4s linear 30ms infinite normal forwards;
+    overflow-y: hidden;
+}
+
+.Leftside >div:first-child span{
+    font-family:versus;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    white-space: break-spaces;
+    text-transform: uppercase;
+    font-size: 66px;
+    text-align: center;
+    color: transparent;
+}
+.Leftside > .tag >div {
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+    cursor: pointer;
+}
+.Leftside >.tag >div span{
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    -webkit-text-fill-color: white;
+    -webkit-text-stroke-width:0;
+    font-size: clamp(30px,calc(22px+2.5vw),48px);
+    transform: translateY(100px);
+    animation: SlideUp 1s linear 0s 1 normal forwards ;
+}
+.Leftside >.tag:hover span{
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke-width:1px;
+    -webkit-text-stroke-color: white;
+}
+#MainHeader{
+    text-transform: uppercase;
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: clamp(36px,calc(28px+2.5vw),54px);
+    color: black;
+    animation: SlideUp 1s linear 0s 1 normal forwards ;
+    overflow-y: hidden;
+}
+
+.Rightside{
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+    justify-content: space-evenly;
+    align-items: center;
+    perspective: 250px;
+}
+.Rightside >.MenuLink{
+    font-family:versus;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    white-space: break-spaces;
+    text-transform: uppercase;
+    -webkit-text-fill-color:black;
+    -webkit-text-stroke-width:0;
+    -webkit-text-stroke-color:white;
+    font-size: 78px;
+    text-align: center;
+    transition: all 200ms linear;
+    cursor: pointer;
+}
+.Rightside >.MenuLink:hover{
+     transform:rotateY(-6deg) scale(1.2) !important;
+    -webkit-text-fill-color:transparent;
+    -webkit-text-stroke-width:3px;
+    -webkit-text-stroke-color: white;
+}
+@media screen and (max-width:1024px) {
+    .Rightside >.MenuLink{
+        font-size: 62x;
+    }
+   .Leftside >div:first-child span{
+        font-size: 52px;
+   }
+}
+@media screen and (max-width:860px) {
+    .Rightside >.MenuLink{
+        font-size: 56px;
+    }
+    .Leftside >div:first-child span{
+        font-size: 42px;
+   }
+}
+

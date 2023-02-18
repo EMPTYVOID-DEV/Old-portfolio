@@ -5,10 +5,12 @@ import useSound from "use-sound"
 import HoverSound from "../../assets/audio/Gta1.mp3"
 import ClickSound from "../../assets/audio/Gta2.mp3"
 import {motion as m} from "framer-motion"
+import { useState } from "react"
 export default function Home() {
+  let [disable,setdisable]=useState<boolean>(false)
   let [play1 ,{stop:stop1}]=useSound(HoverSound)
   let [play2]=useSound(ClickSound)
-
+  
   return (
     <m.div 
     transition={{ease:"easeOut",duration:0.75}}
@@ -16,24 +18,35 @@ export default function Home() {
     className="Home">
         <div className="Leftside">
            <div>
-            <span>Welcome To My</span>
-            <span>Portfolio</span>
+            <m.span
+            initial={{opacity:0}}
+            animate={{opacity:1}}
+            transition={{ease:"easeOut",delay:0.5,duration:1.5}}>Welcome To My</m.span>
+            <m.span
+             initial={{opacity:0}}
+             animate={{opacity:1}}
+             transition={{ease:"easeOut",delay:0.5,duration:1.5}}>Portfolio</m.span>
            </div>
           <Link to="/" reloadDocument className="tag" >
             <div>
-              <span>Keskas</span>
+              <m.span initial={{y:"100%"}}
+                      animate={{y:"0"}}
+                      transition={{ease:"easeOut",delay:0.5,duration:1}}>Keskas</m.span>
             </div>
             <div>
-              <span>Aymen</span>
+              <m.span
+                initial={{y:"100%"}}
+                animate={{y:"0"}}
+                transition={{ease:"easeOut",delay:0.5,duration:1}}>Aymen</m.span>
              </div>
            </Link>
           <MainHeader/>
          </div>
-      <div className='Rightside'>
-           <Link to="/About" onMouseEnter={()=>play1()} onMouseLeave={()=>stop1()} onClick={()=>play2()} className='MenuLink'style={{animation:"ShowUp 450ms linear 300ms 1 normal forwards"}}>About Me</Link>
-           <Link to="/Skill" onMouseEnter={()=>play1()} onMouseLeave={()=>stop1()} onClick={()=>play2()} className='MenuLink'style={{animation:"ShowUp 450ms linear 200ms 1 normal forwards"}}>Skills</Link>
-           <Link to="/Project"  onMouseEnter={()=>play1()} onMouseLeave={()=>stop1()} onClick={()=>play2()} className='MenuLink'style={{animation:"ShowUp 450ms linear 100ms 1 normal forwards"}}>Projects</Link>
-           <Link to="/Contact" onMouseEnter={()=>play1()} onMouseLeave={()=>stop1()} onClick={()=>play2()} className='MenuLink' style={{animation:"ShowUp 450ms linear 0s 1 normal forwards"}}>Contact me</Link>
+      <div className='Rightside'>          
+           <Link to="/About"  onMouseEnter={()=>!disable && play1()}  onClick={()=>{setdisable(true) ;play2();}} className='MenuLink'><m.span initial={{opacity:0}} animate={{opacity:1}} transition={{ease:"easeOut",delay:0.5,duration:1}}>about me</m.span></Link>
+           <Link to="/Skill"  onMouseEnter={()=>!disable && play1()}  onClick={()=>{setdisable(true) ;play2();}} className='MenuLink'><m.span initial={{opacity:0}} animate={{opacity:1}} transition={{ease:"easeOut",delay:0.75,duration:1}}>skills</m.span></Link>
+           <Link to="/Project"   onMouseEnter={()=>!disable && play1()}  onClick={()=>{setdisable(true) ;play2();}} className='MenuLink'><m.span initial={{opacity:0}} animate={{opacity:1}} transition={{ease:"easeOut",delay:1,duration:1}}>projects</m.span></Link>
+           <Link to="/Contact"  onMouseEnter={()=>!disable && play1()}  onClick={()=>{setdisable(true) ;play2();}} className='MenuLink'><m.span initial={{opacity:0}} animate={{opacity:1}} transition={{ease:"easeOut",delay:1.25,duration:1}}>contact me</m.span></Link>
     </div>
     </m.div> 
   )

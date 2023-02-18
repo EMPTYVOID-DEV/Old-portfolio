@@ -1,4 +1,5 @@
 import React from 'react'
+import {motion as m} from "framer-motion"
 export default function MainHeader() {
   let [counter,Increment]=React.useState(19)
   let clearTime=React.useRef({sentence:["Hi Im web developer","Hi Im UX/UI DESIGNER"],toggle:true,index:0});
@@ -25,9 +26,12 @@ export default function MainHeader() {
         }
   },[])
   return (
-      <>
-        <h1 id='MainHeader'>{clearTime.current.sentence[clearTime.current.index].slice(0,counter+1)} </h1>
-      </>  
+      <div>
+        <m.h1 
+        initial={{y:"100%"}}
+        animate={{y:"0"}}
+        transition={{ease:"easeOut",delay:0.5,duration:1}} id='MainHeader'>{clearTime.current.sentence[clearTime.current.index].slice(0,counter+1)} </m.h1>
+      </div>  
   )
 }
 

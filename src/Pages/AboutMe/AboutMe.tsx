@@ -1,29 +1,18 @@
 import  "./About.css"
-import PersonalImg from "../../assets/images/Pers.jpg"
+import PersonalImg from "../../assets/images/aymen&nazim.jpg"
 import {motion as m} from "framer-motion"
 import { Link } from "react-router-dom"
-import { useState } from "react"
-let letters="abcdefghijklmnopqrstuvwxyz"
+import {useState } from "react"
+import { Hack } from "../../Functions/utlity"
 export default function AboutMe() {
+
   let [about ,Animate]=useState<string>("ABOUT ME")
-  const Hack=(Str:string)=>{
-    let iterations=0
-    const interval=setInterval(()=>{ 
-        let newstr=Str.split("").map((el,idx)=>{
-          if(idx<iterations) return Str[idx]
-          return letters[Math.floor(Math.random()*26)]
-        }).join("")
-        if(iterations>=Str.length)
-            clearTimeout(interval)
-        iterations+=1/3
-        Animate(newstr)
-    },90)
-  }
+ 
   return (
      <m.div 
      initial={{y:"100%"}}
      animate={{y:"0"}}
-     transition={{ease:"easeOut",duration:0.75}}
+     transition={{ease:"easeOut",duration:1}}
      exit={{y:"-100%"}}
      className="about">
         <div className="firstlayer">
@@ -48,7 +37,7 @@ export default function AboutMe() {
               initial={{y:"100%"}}
               animate={{y:"0"}}
               transition={{ease:"easeOut",delay:0.5,duration:1}}
-              onMouseOver={()=>{Hack("ABOUT ME")}}>{about}</m.h1>
+              onMouseOver={()=>{Hack("ABOUT ME",Animate)}}>{about}</m.h1>
          </div>
         </div>
         <div className="middlelayer">
@@ -66,9 +55,9 @@ export default function AboutMe() {
                   animate={{y:"0"}}
                   transition={{ease:"easeOut",delay:0.5,duration:1}}
                   >WHO AM I? LET FIND OUT...</m.h2>
-               </div>             
+                </div>             
                <p>My name is Aymen Keskas a 20 year old web developer lives in algeria.I bring creativity in design and precision in solving problems furthermore Building large infrastructure with nodeJs is my passion.I want to share my experience with people and work with them to deliver our best to society.</p>
-               <span>Why hiring me?</span>
+             <span>Why hiring me?</span>
                <div className="skills">
                   <div className="skill">
                     <m.span
@@ -104,14 +93,15 @@ export default function AboutMe() {
                       >Hardwork</m.span>
                     <i className="fa-sharp fa-solid fa-check"></i>
                   </div>
-                  </div>
-               
+                  </div>               
             </div>
         </div>
-        <div className="lastlayer">
+        <m.div initial={{opacity:0}}
+               animate={{opacity:1}}
+               transition={{ease:"easeOut",delay:0.5,duration:1.2}}  className="lastlayer">
            <Link to="/" className="button">Back to Home</Link>
            <Link to="/Skill" className="button">Preceed to Next Section</Link>
-        </div>
+        </m.div>
      </m.div>
   )
 }

@@ -18,7 +18,7 @@
 
 
 .Home{
-   background-color: #4801ff;
+   background-color: #E0E0DA;
    position: absolute;
    top: 0;
    left: 0;
@@ -44,7 +44,7 @@
 .Leftside >div:first-child span{
     font-family:versus;
     font-weight: bolder;
-    background:linear-gradient(to right,white,black,white);
+    background:linear-gradient(to right,#e2a115,#121212,#e2a115);
     background-clip: text;
     -webkit-background-clip:text;
     background-size: 200%;
@@ -67,14 +67,14 @@
     font-weight: bolder;
     letter-spacing: 2px;
     text-transform: uppercase;
-    -webkit-text-fill-color: white;
+    -webkit-text-fill-color: #e2a115;
     -webkit-text-stroke-width:0;
     font-size: clamp(30px,calc(22px+2.5vw),48px);
 }
 .Leftside >.tag:hover span{
     -webkit-text-fill-color:transparent;
     -webkit-text-stroke-width:1px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: #e2a115;
 }
 .Leftside >div:last-child {
     overflow: hidden;
@@ -113,7 +113,7 @@
      transform:rotateY(-6deg) scale(1.2) !important;
     -webkit-text-fill-color:transparent;
     -webkit-text-stroke-width:3px;
-    -webkit-text-stroke-color: white;
+    -webkit-text-stroke-color: #e2a115;
 }
 @media screen and (max-width:1024px) {
     .Rightside >.MenuLink{

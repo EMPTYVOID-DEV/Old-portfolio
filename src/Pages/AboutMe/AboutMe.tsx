@@ -12,7 +12,7 @@ export default function AboutMe() {
      <m.div 
      initial={{y:"100%"}}
      animate={{y:"0"}}
-     transition={{ease:"easeOut",duration:1}}
+     transition={{ease:"easeOut",duration:0.75}}
      exit={{y:"-100%"}}
      className="about">
         <div className="firstlayer">

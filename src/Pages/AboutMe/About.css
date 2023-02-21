@@ -4,7 +4,7 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-color: #e4ddc967;
+    background-color: #E0E0DA;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,7 +35,7 @@ div{
     text-transform: uppercase;
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke-width:2px;
-    -webkit-text-stroke-color:#4801ff;
+    -webkit-text-stroke-color:#e2a115;
     font-size: clamp(30px,calc(22px+2.5vw),48px);
 }
 .firstlayer > div:last-child h1{
@@ -43,7 +43,7 @@ div{
     font-weight: bolder;
     letter-spacing: 2px;
     text-transform: uppercase;
-    -webkit-text-fill-color: #4801ff;
+    -webkit-text-fill-color: #e2a115;
     font-size: clamp(36px,calc(12.5px+4.18vw),66px);
 }
 .middlelayer{
@@ -96,7 +96,7 @@ div{
     margin-top: 12px;
     letter-spacing: 2px;
     white-space: break-spaces;
-    color: #4801ff;
+    color: #e2a115;
     font-size: clamp(16px,calc(12px+0.46vw),18px);
 }
 .lastlayer {
@@ -136,7 +136,7 @@ div{
     left:0;
     top:0;
     transition:all 300ms 0s ease;
-    background-color:#4801ff;
+    background-color:#e2a115;
     border-radius:.5px; 
     z-index:-1;
 }
@@ -160,7 +160,7 @@ div{
     gap:8px;
 }
 .middlelayer > .Content >.skills >.skill >i{
-    color: #4801ff;
+    color: #e2a115;
 }
 .middlelayer > .Content >.skills >.skill >span{
     font-family:Verdana, Geneva, Tahoma, sans-serif;

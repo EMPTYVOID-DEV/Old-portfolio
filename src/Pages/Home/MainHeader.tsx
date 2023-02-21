@@ -20,7 +20,7 @@ export default function MainHeader() {
                   return prev-1;
                 }
             })
-        },600)
+        },580)
         return ()=>{
           clearInterval(id)
         }

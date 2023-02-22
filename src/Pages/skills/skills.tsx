@@ -8,7 +8,7 @@ import ImageMapper from "react-img-mapper"
 import Brain from "../../assets/images/brain.png"
 
 function defaultSkillColor(){
-    return new Map([["figma",""],["css",""],["DSAL",""],["react",""],["node",""],["mongodb",""],["express",""],["libraries",""],["tailwind",""],["typescript",""],["html",""]])
+    return new Map([["figma","#121212"],["css","#121212"],["DSAL","#121212"],["react","#121212"],["node","#121212"],["mongodb","#121212"],["express","#121212"],["libraries","#121212"],["tailwind","#121212"],["typescript","#121212"],["html","#121212"]])
 }
 
 export default function Skills() {
@@ -92,10 +92,10 @@ export default function Skills() {
                 </div>
              </div>
              <ImageMapper  imgWidth={967}  width={560} src={Brain} map={MAP} onMouseEnter={(area)=>{
-                  const newmap=new Map(defaultSkillColor())
+                  const newmap=defaultSkillColor()
                   newmap.set(area.id as string,area.fillColor as string)    
                   SetSkillColor(newmap)
-             }} />
+             }}  onMouseLeave={()=>{SetSkillColor(defaultSkillColor())}}/>
         </div>
     <m.div initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}

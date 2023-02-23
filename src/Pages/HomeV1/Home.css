@@ -1,0 +1,123 @@
+.Home {
+  background-color: #e0e0da;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px 0 10px 2%;
+  display: grid;
+  grid-template-columns: 46% 54%;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.Leftside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 20px;
+  height: 90%;
+}
+.Leftside > div:first-child {
+  margin-block: auto;
+  overflow-y: hidden;
+}
+
+.Leftside > div:first-child span {
+  font-family: versus;
+  font-weight: bolder;
+  background: linear-gradient(to right, #e2a115, #121212, #e2a115);
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-size: 200%;
+  letter-spacing: 2px;
+  white-space: break-spaces;
+  text-transform: uppercase;
+  font-size: 66px;
+  text-align: center;
+  color: transparent;
+  animation: coloring 4s linear 1.5s infinite normal forwards;
+}
+.Leftside > .tag > div {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  cursor: pointer;
+}
+.Leftside > .tag > div span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  -webkit-text-fill-color: #e2a115;
+  -webkit-text-stroke-width: 0;
+  font-size: clamp(30px, calc(22px+2.5vw), 48px);
+}
+.Leftside > .tag:hover span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #e2a115;
+}
+.Leftside > div:last-child {
+  overflow: hidden;
+}
+.Leftside > div:last-child > #MainHeader {
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(36px, calc(28px+2.5vw), 54px);
+  color: black;
+}
+
+.Rightside {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: space-evenly;
+  align-items: center;
+  perspective: 300px;
+}
+.Rightside > .MenuLink {
+  font-family: versus;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  white-space: break-spaces;
+  text-transform: uppercase;
+  -webkit-text-fill-color: black;
+  -webkit-text-stroke-width: 0;
+  -webkit-text-stroke-color: white;
+  font-size: 78px;
+  text-align: center;
+  transform: rotateY(-13deg);
+  transition: all 200ms cubic-bezier(0.215, 0.61, 0.355, 1);
+  cursor: pointer;
+}
+.Rightside > .MenuLink:hover {
+  transform: rotateY(-6deg) scale(1.2) !important;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 3px;
+  -webkit-text-stroke-color: #e2a115;
+}
+@media screen and (max-width: 1024px) {
+  .Rightside > .MenuLink {
+    font-size: 62x;
+  }
+  .Leftside > div:first-child span {
+    font-size: 52px;
+  }
+}
+@media screen and (max-width: 860px) {
+  .Rightside > .MenuLink {
+    font-size: 56px;
+  }
+  .Leftside > div:first-child span {
+    font-size: 42px;
+  }
+}
+@media screen and (max-width: 760px) {
+  .Rightside > .MenuLink {
+    font-size: 45px;
+  }
+  .Leftside > div:first-child span {
+    font-size: 32px;
+  }
+}
+/* next media around 680 */

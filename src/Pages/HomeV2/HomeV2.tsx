@@ -1,13 +1,20 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import styles from "./HomeV2.module.css";
 import main from "../../assets/images/main.jpg";
 import { motion as m } from "framer-motion";
 import { Link } from "react-router-dom";
 
 export default function HomeV2() {
-  const [imgStyle, animateImg] = useState<boolean>(false);
-  const [intailLoad, Check] = useState<boolean>(true);
+  const [imgStyle, animateImg] = useState<boolean>(true);
   const mediaQuery = useRef<any>(null);
+  useEffect(() => {
+    let timer = setTimeout(() => {
+      animateImg(false);
+    }, 1650);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, []);
   return (
     <m.div
       style={{ backgroundColor: `${imgStyle ? "#121212" : "transparent"}` }}
@@ -19,14 +26,9 @@ export default function HomeV2() {
         style={{ color: `${imgStyle ? "#e2a115" : ""}` }}
         onClick={() => {
           animateImg(!imgStyle);
-          Check(false);
         }}
       ></i>
-      <m.img
-        className={imgStyle ? styles.imgView : styles.img}
-        id={intailLoad ? styles.animate : ""}
-        src={main}
-      />
+      <m.img className={imgStyle ? styles.imgView : styles.img} src={main} />
       <div className={styles.navBar}>
         <Link to="/" reloadDocument className={styles.tag}>
           <div>

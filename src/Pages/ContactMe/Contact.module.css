@@ -53,13 +53,14 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   -webkit-text-fill-color: #e2a115;
-  font-size: clamp(36px, calc(12.5px+4.18vw), 66px);
+  font-size: clamp(32px, calc(12.5px+4.18vw), 64px);
 }
 .EmailContact {
   width: 100%;
   height: 50%;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 #Img {
@@ -157,16 +158,18 @@ textarea::placeholder {
   color: #121212;
 }
 .social > .svgContainer {
-  width: 18%;
+  width: 20%;
   height: 100%;
 }
 
 .social > .svgContainer > svg {
   width: 100%;
   height: 100%;
+  transform: rotateZ(15deg) translateY(-10px);
 }
 
 .social > .medias {
+  width: 20%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -228,11 +231,50 @@ textarea::placeholder {
 }
 @media screen and (max-width: 760px) {
   .Contact > h2:first-of-type {
-    font-size: 20px;
+    font-size: 24px;
+  }
+  .social > .medias {
+    width: 30%;
   }
 }
 @media screen and (max-width: 650px) {
+  .Contact {
+    height: 220vh;
+  }
   .Contact > h2:first-of-type {
+    font-size: 20px;
+  }
+  #Img {
+    display: none;
+  }
+  #Contact_form {
+    width: 80%;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: clamp(5px, 0.5vw, 8px);
+    padding-right: clamp(18px, 5vw, 60px);
+  }
+  .social > .medias img {
+    width: 2.4rem;
+    aspect-ratio: 1/1;
+  }
+  .social > .svgContainer {
+    width: 40%;
+    height: 100%;
+  }
+  .social > .svgContainer {
+    width: 35%;
+    height: 100%;
+  }
+  .social {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .social > .svgContainer > svg {
+    transform: rotateZ(-30deg);
+  }
+
+  .social > h2 {
     font-size: 18px;
   }
 }

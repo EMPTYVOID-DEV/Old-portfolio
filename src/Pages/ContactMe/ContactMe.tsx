@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
 import { Hack } from "../../Functions/utlity";
 import discord from "../../assets/images/discord.svg";
-import facebook from "../../assets/images/facebook.svg";
+import linkdin from "../../assets/images/linkdin.svg";
 import twitter from "../../assets/images/twitter.svg";
 
 export default function Contact() {
@@ -127,9 +127,21 @@ export default function Contact() {
           </svg>
         </div>
         <div className={styles.medias}>
-          <img src={facebook} className={styles.media} />
-          <img src={twitter} className={styles.media} />
-          <img src={discord} className={styles.media} />
+          <a
+            target={"_blank"}
+            href={"https://www.linkedin.com/in/aizen-soskue-750b96260/"}
+          >
+            <img src={linkdin} className={styles.media} />
+          </a>
+          <a target={"_blank"} href={"https://twitter.com/soskue_aizen"}>
+            <img src={twitter} className={styles.media} />
+          </a>
+          <a
+            href="https://discordapp.com/users/577891074236743690"
+            target={"_blank"}
+          >
+            <img src={discord} className={styles.media} />
+          </a>
         </div>
       </div>
       <m.div

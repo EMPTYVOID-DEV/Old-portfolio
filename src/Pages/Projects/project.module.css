@@ -357,3 +357,11 @@
     font-size: 32px;
   }
 }
+@media screen and (width<650px) {
+  .projects {
+    height: 118vh;
+  }
+  .projects > h1:first-of-type {
+    font-size: 22px;
+  }
+}

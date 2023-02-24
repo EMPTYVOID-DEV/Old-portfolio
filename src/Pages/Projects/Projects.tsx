@@ -126,7 +126,7 @@ export default function Projects() {
         <Link to="/" className="button">
           Back to Home
         </Link>
-        <Link to="/Skill" className="button">
+        <Link to="/Contact" className="button">
           Preceed to Next Section
         </Link>
       </m.div>

@@ -79,10 +79,10 @@ export default function Contact() {
           </m.h1>
         </div>
       </div>
-      <h2>
+      <h1>
         Feel Free to communicate with me
         <br /> through this form
-      </h2>
+      </h1>
       <div className={styles.EmailContact}>
         <img src={ContactImg} alt="Something did go wrong" id={styles.Img} />
         <form ref={form} onSubmit={sendEmail} id={styles.Contact_form}>
@@ -153,7 +153,7 @@ export default function Contact() {
         <Link to="/" className={styles.button}>
           Back to Home
         </Link>
-        <Link to="/Project" className={styles.button}>
+        <Link to="/About" className={styles.button}>
           Preceed to Next Section
         </Link>
       </m.div>

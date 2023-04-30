@@ -20,7 +20,7 @@
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  gap: 5%;
+  gap: 2%;
 }
 .firstlayer {
   width: 90%;
@@ -63,21 +63,9 @@
   white-space: break-spaces;
   text-transform: uppercase;
   text-align: center;
-  font-size: 45px;
+  font-size: 38px;
   text-align: center;
   color: #121212;
-}
-
-.front {
-  width: 380px;
-  height: 380px;
-  position: absolute;
-  filter: blur(80px);
-  border-radius: 50%;
-  background: linear-gradient(to right, #eba40c, #e0e0da);
-  animation: rotate 10s linear 0s infinite normal forwards;
-  z-index: -2;
-  color: #85280c;
 }
 
 .BrainSet {
@@ -172,7 +160,8 @@
 
 @media screen and (width<860px) {
   .skills {
-    height: 260vh;
+    height: 165vh;
+    gap: 1%;
   }
   .BrainSet {
     flex-direction: column-reverse;
@@ -183,6 +172,26 @@
 }
 @media screen and (width<760px) {
   .skills > h1:first-of-type {
-    font-size: 32px;
+    display: none;
+  }
+  .skills {
+    gap: 0;
+  }
+  .skills > .firstlayer {
+    margin-bottom: 30px;
+  }
+  .BrainSet {
+    margin-bottom: 10px;
+  }
+  .BrainSet > .leftside {
+    margin-top: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 49% 49%;
+    gap: 0.5%;
+    padding-left: 12%;
+  }
+  .BrainSet > .leftside > .sections > h3 {
+    font-size: clamp(20px, calc(6px+1.4vw), 32px);
   }
 }

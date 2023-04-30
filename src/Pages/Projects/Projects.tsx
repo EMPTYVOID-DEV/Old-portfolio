@@ -63,11 +63,11 @@ export default function Projects() {
         data-configuration={morph.configuration}
       >
         <a
-          href="https://github.com/Shinji13/NoteAppFrontEnd"
+          href="https://github.com/Shinji13/NoteApp"
           target="_blank"
           className={style.shape}
           onMouseEnter={() => {
-            Appear("Note App Frontend");
+            Appear("Note App");
           }}
         ></a>
         <a
@@ -87,19 +87,22 @@ export default function Projects() {
           }}
         ></a>
         <a
-          href="https://github.com/Shinji13/NoteAppbackEnd"
+          href="https://github.com/Shinji13/Mern-blood-bank"
           target="_blank"
           className={style.shape}
           onMouseEnter={() => {
-            Appear("Note App Backend");
+            Appear("Blood Bank Management System");
           }}
         ></a>
         <a
-          href=""
+          href="https://github.com/Shinji13/Mern-chat-app"
           onClick={(e) => {
             e.preventDefault();
           }}
           className={style.shape}
+          onMouseEnter={() => {
+            Appear("Live Chat Application");
+          }}
         ></a>
         <a
           href=""

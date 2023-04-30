@@ -18,7 +18,7 @@
   white-space: break-spaces;
   text-transform: uppercase;
   text-align: center;
-  font-size: 45px;
+  font-size: 38px;
   text-align: center;
   color: #121212;
 }
@@ -117,8 +117,8 @@
 
 .wrapper {
   position: relative;
-  width: 60%;
-  aspect-ratio: 1.618;
+  width: 55%;
+  aspect-ratio: 1.01;
 }
 .wrapper .shape {
   position: absolute;

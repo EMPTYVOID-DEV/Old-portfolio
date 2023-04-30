@@ -75,7 +75,6 @@ export default function Skills() {
       <h1>
         Let Know about my capabilities and <br /> dive into my mind
       </h1>
-      <div className={styles.front} ref={blob}></div>
       <div className={styles.BrainSet}>
         <div className={styles.leftside}>
           <div className={styles.sections}>
@@ -104,7 +103,7 @@ export default function Skills() {
           </div>
           <div className={styles.sections}>
             <h3 style={{ color: `${MapOfSkills.get("libraries")}` }}>
-              Famous Technologies 20%
+              Famous Skills 20%
             </h3>
             <span>React Query</span>
             <span>Mongoose</span>
@@ -117,7 +116,7 @@ export default function Skills() {
             <h3>Other Skills 10%</h3>
             <span style={{ color: `${MapOfSkills.get("figma")}` }}> Figma</span>
             <span style={{ color: `${MapOfSkills.get("DSAL")}` }}>
-              Data Structures and Algoritmes
+              Data Scientist
             </span>
           </div>
         </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import styles from "./HomeV2.module.css";
 import main from "../../assets/images/main.jpg";
 import { motion as m } from "framer-motion";
@@ -28,6 +28,7 @@ export default function HomeV2() {
           animateImg(!imgStyle);
         }}
       ></i>
+
       <m.img className={imgStyle ? styles.imgView : styles.img} src={main} />
       <div className={styles.navBar}>
         <Link to="/" reloadDocument className={styles.tag}>
@@ -83,10 +84,10 @@ export default function HomeV2() {
             to="/Contact"
             className={imgStyle ? styles.sectionBlack : styles.section}
           >
-            contact
+            Contact Me
           </Link>
           <i
-            className="far fa-window-close"
+            className="fa-solid fa-xmark"
             id={styles.close}
             onClick={() => {
               mediaQuery.current.style.right = "-200%";
@@ -115,6 +116,7 @@ export default function HomeV2() {
             </m.h1>
           </div>
         </div>
+
         <div className={styles.rightside}>
           <div>
             <i
@@ -160,3 +162,4 @@ export default function HomeV2() {
     </m.div>
   );
 }
+// BleachAizen@1985

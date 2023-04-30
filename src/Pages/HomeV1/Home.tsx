@@ -2,6 +2,7 @@ import MainHeader from "./MainHeader";
 import "./Home.css";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
+
 export default function Home() {
   return (
     <m.div

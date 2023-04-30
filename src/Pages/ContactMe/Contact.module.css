@@ -11,14 +11,14 @@
   overflow-x: hidden;
   gap: 5%;
 }
-.Contact > h2:first-of-type {
+.Contact > h1:first-of-type {
   font-family: versus;
   font-weight: bolder;
   letter-spacing: 2px;
   white-space: break-spaces;
   text-transform: uppercase;
   text-align: center;
-  font-size: 34px;
+  font-size: 38px;
   text-align: center;
   color: #121212;
 }

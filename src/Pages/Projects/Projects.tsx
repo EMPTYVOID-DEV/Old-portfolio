@@ -87,7 +87,7 @@ export default function Projects() {
           }}
         ></a>
         <a
-          href="https://github.com/Shinji13/Mern-blood-bank"
+          href="https://github.com/Shinji13/Mern-Blood-Bank"
           target="_blank"
           className={style.shape}
           onMouseEnter={() => {
@@ -95,10 +95,8 @@ export default function Projects() {
           }}
         ></a>
         <a
-          href="https://github.com/Shinji13/Mern-chat-app"
-          onClick={(e) => {
-            e.preventDefault();
-          }}
+          href="https://github.com/Shinji13/chatApp"
+          target="_blank"
           className={style.shape}
           onMouseEnter={() => {
             Appear("Live Chat Application");
@@ -106,16 +104,14 @@ export default function Projects() {
         ></a>
         <a
           href=""
-          onClick={(e) => {
-            e.preventDefault();
-          }}
+          target="_blank"
+          onMouseEnter={() => Appear("")}
           className={style.shape}
         ></a>
         <a
           href=""
-          onClick={(e) => {
-            e.preventDefault();
-          }}
+          target="_blank"
+          onMouseEnter={() => Appear("")}
           className={style.shape}
         ></a>
       </m.div>

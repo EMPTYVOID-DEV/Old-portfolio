@@ -1,198 +1,212 @@
 .about {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: #E0E0DA;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #e0e0da;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2%;
 }
-div{
-    overflow: hidden;
+div {
+  overflow: hidden;
 }
-.firstlayer{
-    width: 90%;
-    min-height: fit-content;
-    height: 15%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-inline: 5%;
+.firstlayer {
+  width: 90%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 5%;
 }
-.firstlayer >.tag >div{
-    display: flex;
-    flex-direction: column;
-    overflow-y: hidden;
-    cursor: pointer;
+.firstlayer > .tag > div {
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  cursor: pointer;
 }
-.firstlayer >.tag >div span{
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width:2px;
-    -webkit-text-stroke-color:#e2a115;
-    font-size: clamp(30px,calc(22px+2.5vw),48px);
+.firstlayer > .tag > div span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: #e2a115;
+  font-size: clamp(1.125rem, 0.65vw + 0.978rem, 1.5rem);
 }
-.firstlayer > div:last-child h1{
-    font-family:versus;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    -webkit-text-fill-color: #e2a115;
-    font-size: clamp(36px,calc(12.5px+4.18vw),66px);
+.firstlayer > div:last-child h1 {
+  font-family: versus;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  -webkit-text-fill-color: #e2a115;
+  font-size: clamp(1.125rem, 0.65vw + 0.978rem, 1.5rem);
 }
-.middlelayer{
-    display: flex;
-    width: 100%;
-    height: 70%;
-    justify-content: center;
-    align-items: center;
-    gap: 3%;
+.middlelayer {
+  display: flex;
+  width: 100%;
+  height: 70%;
+  justify-content: center;
+  align-items: center;
+  gap: 3%;
 }
-.middlelayer >.ImgContainer{
-    border: 2px solid #121212;
-    border-radius: 2px;
-    width: 50%;
+.middlelayer > .ImgContainer {
+  border: 2px solid #121212;
+  border-radius: 2px;
+  width: 50%;
 }
-.middlelayer >.ImgContainer >img {
-     width: 100%;
-     height: 300px;
-     object-fit: cover;
-     object-position: center;
-     position: relative;
-     top:-1.5%;
-     right:1.5%;
+.middlelayer > .ImgContainer > img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+  position: relative;
+  top: -1.5%;
+  right: 1.5%;
 }
-.middlelayer >.Content{
-    width: 40%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.middlelayer > .Content {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 2%;
 }
-.middlelayer >.Content >div:first-child >h2{
-    font-family:Versus;
-    font-weight: bolder;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #121212;
-    font-size: clamp(25px,calc(8.6px+3.07vw),48px);
+.middlelayer > .Content > div:first-child > h2 {
+  font-family: Versus;
+  font-weight: bolder;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #121212;
+  font-size: clamp(25px, calc(8.6px+3.07vw), 48px);
 }
-.middlelayer >.Content >p{
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: 600;
-    letter-spacing: 2px;
-    white-space: break-spaces;
-    color: #121212;
-    font-size: clamp(16px,calc(12px+0.46vw),18px);
+.middlelayer > .Content > p {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  white-space: break-spaces;
+  color: #121212;
+  font-size: clamp(16px, calc(12px+0.46vw), 18px);
 }
-.middlelayer >.Content >span{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: bolder;
-    margin-top: 12px;
-    letter-spacing: 2px;
-    white-space: break-spaces;
-    color: #e2a115;
-    font-size: clamp(16px,calc(12px+0.46vw),18px);
+.middlelayer > .Content > span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bolder;
+  margin-top: 12px;
+  letter-spacing: 2px;
+  white-space: break-spaces;
+  color: #e2a115;
+  font-size: clamp(16px, calc(12px+0.46vw), 18px);
 }
 .lastlayer {
-    display: flex;
-    width: 100%;
-    height: 15%;
-    justify-content: space-evenly;
-    align-items: center;
+  display: flex;
+  width: 100%;
+  height: 15%;
+  justify-content: space-evenly;
+  align-items: center;
 }
-.lastlayer > .button{
-    width:fit-content;
-    height:fit-content;
-    display: flex;
-    align-items: center; 
-    letter-spacing:.5px;
-    justify-content:center;
-    position: relative;
-    font-size:.9rem;
-    font-weight:bold;
-    font-family:versus;
-    color:#121212;
-    padding-inline:.2rem;
-    padding-block:.4rem;
-    background-color:transparent;
-    border:.5px solid #121212;
-    border-radius:5px; 
-    cursor:pointer;
-    font-size: clamp(16px,calc(12px+0.46vw),18px);
-    
+.lastlayer > .button {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.5px;
+  justify-content: center;
+  position: relative;
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-family: versus;
+  color: #121212;
+  padding-inline: 0.2rem;
+  padding-block: 0.4rem;
+  background-color: transparent;
+  border: 0.5px solid #121212;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: clamp(16px, calc(12px+0.46vw), 18px);
 }
-.lastlayer > .button::before{
-    content:"";
-    display:inline-block;
-    width:0;
-    height:100%;
-    position:absolute;
-    left:0;
-    top:0;
-    transition:all 300ms 0s ease;
-    background-color:#e2a115;
-    border-radius:.5px; 
-    z-index:-1;
+.lastlayer > .button::before {
+  content: "";
+  display: inline-block;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 300ms 0s ease;
+  background-color: #e2a115;
+  border-radius: 0.5px;
+  z-index: -1;
 }
-.lastlayer > .button:hover::before{
-    width: 100%;
+.lastlayer > .button:hover::before {
+  width: 100%;
 }
-.lastlayer > .button:hover{
-    border: .5px solid #121212;
-    color: white;
+.lastlayer > .button:hover {
+  border: 0.5px solid #121212;
+  color: white;
 }
-.middlelayer > .Content >.skills {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
+.middlelayer > .Content > .skills {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
-.middlelayer > .Content >.skills >.skill{
-    display: flex;
-    align-items: center;
-    margin-bottom: 12px;
-    gap:8px;
+.middlelayer > .Content > .skills > .skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  gap: 8px;
 }
-.middlelayer > .Content >.skills >.skill >i{
-    color: #e2a115;
+.middlelayer > .Content > .skills > .skill > i {
+  color: #e2a115;
 }
-.middlelayer > .Content >.skills >.skill >span{
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
-    font-weight:800;
-    letter-spacing: 2px;
-    white-space: break-spaces;
-    font-size: clamp(14px,calc(13px+0.46vw),18px);
+.middlelayer > .Content > .skills > .skill > span {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+  white-space: break-spaces;
+  font-size: clamp(14px, calc(13px+0.46vw), 18px);
 }
 
 @media screen and (width <860px) {
-    .about{
-        height: 160vh;
-    }
-    .middlelayer{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 80%;
-        justify-content: center;
-        align-items: center;
-        gap: 3%;
-    }
-    .middlelayer >.ImgContainer{
-        width: 70%;
-    }
-    .middlelayer >.Content{
-        width:70%;
-    }
+  .about {
+    height: 120vh;
+  }
+  .middlelayer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 80%;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+  }
+  .middlelayer > .Content {
+    gap: 10%;
+  }
+  .middlelayer > .ImgContainer {
+    width: 70%;
+  }
+  .middlelayer > .Content {
+    width: 70%;
+  }
+  .lastlayer {
+    height: 5%;
+  }
 }
 @media screen and (width <630px) {
-    .middlelayer >.Content{
-        width:70%;
-    }
-    
+  .middlelayer > .Content {
+    width: 70%;
+  }
+}
+
+@media screen and (width < 840px) and (height < 745px) {
+  .about {
+    height: 140vh;
+  }
+}
+@media screen and (width < 378px) and (height < 745px) {
+  .about {
+    height: 150vh;
+  }
 }

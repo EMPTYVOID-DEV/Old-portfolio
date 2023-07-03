@@ -18,14 +18,13 @@
   white-space: break-spaces;
   text-transform: uppercase;
   text-align: center;
-  font-size: 38px;
+  font-size: clamp(1.5rem, calc(1.086vw + 1.2554rem), 2.125rem);
   text-align: center;
   color: #121212;
 }
 .firstlayer {
   width: 90%;
-  min-height: fit-content;
-  height: 15%;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,7 +44,7 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #e2a115;
-  font-size: clamp(30px, calc(22px+2.5vw), 48px);
+  font-size: clamp(1.125rem, 0.65vw + 0.978rem, 1.5rem);
 }
 .firstlayer > div:last-child h1 {
   font-family: versus;
@@ -53,7 +52,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   -webkit-text-fill-color: #e2a115;
-  font-size: clamp(32px, calc(12.5px+4.18vw), 64px);
+  font-size: clamp(1.125rem, 0.65vw + 0.978rem, 1.5rem);
 }
 .EmailContact {
   width: 100%;

@@ -79,10 +79,7 @@ export default function Contact() {
           </m.h1>
         </div>
       </div>
-      <h1>
-        Feel Free to communicate with me
-        <br /> through this form
-      </h1>
+      <h1>Feel Free to communicate</h1>
       <div className={styles.EmailContact}>
         <img src={ContactImg} alt="Something did go wrong" id={styles.Img} />
         <form ref={form} onSubmit={sendEmail} id={styles.Contact_form}>

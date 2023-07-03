@@ -14,19 +14,18 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 150vh;
+  min-height: 100vh;
   background: #e0dfda;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
+  padding-bottom: 20px;
   gap: 2%;
 }
 .firstlayer {
   width: 90%;
-  min-height: fit-content;
-  margin-top: 30px;
-  height: fit-content;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -46,7 +45,7 @@
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #e2a115;
-  font-size: clamp(30px, calc(22px+2.5vw), 48px);
+  font-size: clamp(1.125rem, 0.65vw + 0.978rem, 1.5rem);
 }
 .firstlayer > div:last-child h1 {
   font-family: versus;
@@ -54,7 +53,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   -webkit-text-fill-color: #e2a115;
-  font-size: clamp(36px, calc(12.5px+4.18vw), 66px);
+  font-size: clamp(1.125rem, 0.65vw + 0.978rem, 1.5rem);
 }
 .skills > h1:first-of-type {
   font-family: versus;
@@ -63,7 +62,7 @@
   white-space: break-spaces;
   text-transform: uppercase;
   text-align: center;
-  font-size: 38px;
+  font-size: clamp(1.5rem, calc(1.086vw + 1.2554rem), 2.125rem);
   text-align: center;
   color: #121212;
 }
@@ -115,7 +114,7 @@
   display: flex;
   width: 100%;
   justify-content: space-evenly;
-  margin-block: auto;
+  margin-top: 1vh;
 }
 .lastlayer > .button {
   width: fit-content;
@@ -159,28 +158,14 @@
 }
 
 @media screen and (width<860px) {
-  .skills {
-    height: 165vh;
-    gap: 1%;
-  }
-  .BrainSet {
-    flex-direction: column-reverse;
-  }
   .skills > h1:first-of-type {
     font-size: 35px;
-  }
-}
-@media screen and (width<760px) {
-  .skills > h1:first-of-type {
-    display: none;
-  }
-  .skills {
-    gap: 0;
   }
   .skills > .firstlayer {
     margin-bottom: 30px;
   }
   .BrainSet {
+    flex-direction: column-reverse;
     margin-bottom: 10px;
   }
   .BrainSet > .leftside {

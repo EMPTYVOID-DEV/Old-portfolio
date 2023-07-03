@@ -18,7 +18,7 @@
 #star {
   position: absolute;
   top: 20%;
-  left: 52%;
+  left: 50%;
   transform: translate(-50%, -50%);
   font-size: 3rem;
   cursor: pointer;
@@ -68,7 +68,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 30px;
+  padding-inline: 1%;
   background-color: transparent;
 }
 .navBar > .NavSections {
@@ -109,7 +109,7 @@
   text-transform: uppercase;
   -webkit-text-fill-color: #ededed;
   -webkit-text-stroke-width: 0;
-  font-size: clamp(26px, calc(18px+2vw), 38px);
+  font-size: clamp(1.125rem, 0.65vw + 0.978rem, 1.5rem);
 }
 .navBar > .tag:hover .normal {
   -webkit-text-fill-color: transparent;
@@ -123,7 +123,7 @@
   text-transform: uppercase;
   -webkit-text-fill-color: #e2a115;
   -webkit-text-stroke-width: 0;
-  font-size: clamp(26px, calc(18px+2vw), 38px);
+  font-size: clamp(1.125rem, 0.65vw + 0.978rem, 1.5rem);
 }
 .navBar > .tag:hover .special {
   -webkit-text-fill-color: transparent;
@@ -204,17 +204,31 @@
   font-size: 2rem;
 }
 @media screen and (max-width: 1280px) {
-  .middleSection > .leftside > .normal,
-  .special > h1 {
+  .middleSection > .leftside > .normal > h1 {
+    font-size: 72px;
+  }
+  .middleSection > .leftside > .special > h1 {
     font-size: 72px;
   }
 }
+@media screen and (max-width: 1180px) {
+  .middleSection > .leftside > .normal > h1 {
+    font-size: 68px;
+  }
+  .middleSection > .leftside > .special > h1 {
+    font-size: 68px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .middleSection > .leftside > .normal > h1 {
     font-size: 64px;
   }
   .middleSection > .leftside > .special > h1 {
     font-size: 64px;
+  }
+  .middleSection > .rightside > div > h1 {
+    font-size: 30px;
   }
 }
 @media screen and (max-width: 960px) {
@@ -236,10 +250,13 @@
   .middleSection > .leftside > .special > h1 {
     font-size: 48px;
   }
+  .middleSection > .rightside > div > h1 {
+    font-size: 24px;
+  }
 }
 @media screen and (width <650px) {
   .HomeV2 {
-    height: 120vh;
+    height: 100vh;
   }
   #toggle {
     display: inline-block;
@@ -250,9 +267,9 @@
     display: inline-block;
     font-size: 3rem;
     position: absolute;
-    left: 8%;
+    right: 8%;
     top: 2.5%;
-    color: #121212;
+    color: #e2a115;
   }
   .middleSection {
     grid-template-rows: 25% 55%;
@@ -269,10 +286,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    align-items: center;
-    background-color: #e2a115;
+    align-items: flex-start;
+    background-color: #121212;
     z-index: 2;
-    border-top-left-radius: 12px;
+    padding-left: 20px;
+    border-top-left-radius: 3vw;
     border-bottom-left-radius: 12px;
   }
   .navBar > .NavSections > .section {
@@ -281,7 +299,8 @@
     font-weight: 800;
     letter-spacing: 1px;
     color: #ededed;
-    font-size: clamp(26px, calc(12.6px+2.07vw), 42px);
+    width: 80%;
+    font-size: 20px;
   }
   .navBar > .NavSections > .sectionBlack {
     font-family: Arial, Helvetica, sans-serif;
@@ -289,14 +308,17 @@
     font-weight: 800;
     letter-spacing: 1px;
     color: #ededed;
-    font-size: clamp(26px, calc(12.6px+2.07vw), 42px);
+    font-size: 20px;
   }
   .navBar > .NavSections .section:hover {
     opacity: 1;
-    color: #121212;
+    color: #e2a115;
   }
   .navBar > .NavSections .sectionBlack:hover {
     opacity: 1;
-    color: #121212;
+    color: #e2a115;
+  }
+  middleSection > .rightside > div > h1 {
+    font-size: 20px;
   }
 }

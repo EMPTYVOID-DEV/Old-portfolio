@@ -72,13 +72,11 @@ export default function Skills() {
           </m.h1>
         </div>
       </div>
-      <h1>
-        Let Know about my capabilities and <br /> dive into my mind
-      </h1>
+      <h1>Let Know about my capabilities</h1>
       <div className={styles.BrainSet}>
         <div className={styles.leftside}>
           <div className={styles.sections}>
-            <h3>Front End 32%</h3>
+            <h3>Front End 38%</h3>
             <span style={{ color: `${MapOfSkills.get("html")}` }}>Html</span>
             <span style={{ color: `${MapOfSkills.get("css")}` }}>Css</span>
             <span style={{ color: `${MapOfSkills.get("tailwind")}` }}>
@@ -92,7 +90,7 @@ export default function Skills() {
             </span>
           </div>
           <div className={styles.sections}>
-            <h3>Back End 38%</h3>
+            <h3>Back End 32%</h3>
             <span style={{ color: `${MapOfSkills.get("node")}` }}>Node Js</span>
             <span style={{ color: `${MapOfSkills.get("mongodb")}` }}>
               Mongo DB
@@ -116,7 +114,7 @@ export default function Skills() {
             <h3>Other Skills 10%</h3>
             <span style={{ color: `${MapOfSkills.get("figma")}` }}> Figma</span>
             <span style={{ color: `${MapOfSkills.get("DSAL")}` }}>
-              Data Scientist
+              Data Structures
             </span>
           </div>
         </div>

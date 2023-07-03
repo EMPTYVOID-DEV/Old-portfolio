@@ -23,16 +23,26 @@ export function UseResize() {
   const [width, setWidth] = useState(560);
 
   useEffect(() => {
-    const changeWidth = (e) => {
+    const tabletChange = (e) => {
       if (e.matches) {
         setWidth(400);
       } else {
         setWidth(560);
       }
     };
-    const viewMedia = window.matchMedia("(width<630px)");
-    changeWidth(viewMedia);
-    viewMedia.addEventListener("change", changeWidth);
+    const mobileChange = (e) => {
+      if (e.matches) {
+        setWidth(320);
+      } else {
+        setWidth(560);
+      }
+    };
+    const tabletMedia = window.matchMedia("(width<680px)");
+    const mobileMedia = window.matchMedia("(width<440px)");
+    tabletChange(tabletMedia);
+    mobileChange(mobileMedia);
+    tabletMedia.addEventListener("change", tabletChange);
+    mobileMedia.addEventListener("change", mobileChange);
   }, []);
   return width;
 }

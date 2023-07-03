@@ -18,7 +18,8 @@
     "react-img-mapper": "^1.5.0",
     "react-router": "^6.8.1",
     "react-router-dom": "^6.8.1",
-    "three": "^0.150.1"
+    "three": "^0.150.1",
+    "typescript": "^5.1.6"
   },
   "devDependencies": {
     "@types/react": "^18.0.27",

@@ -3,12 +3,16 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
   background-color: #e0e0da;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
-  gap: 2%;
+  box-sizing: content-box;
+  padding-block: 2%;
+  gap: 1%;
 }
 div {
   overflow: hidden;
@@ -169,9 +173,6 @@ div {
 }
 
 @media screen and (width <860px) {
-  .about {
-    height: 120vh;
-  }
   .middlelayer {
     display: flex;
     flex-direction: column;
@@ -197,16 +198,5 @@ div {
 @media screen and (width <630px) {
   .middlelayer > .Content {
     width: 70%;
-  }
-}
-
-@media screen and (width < 840px) and (height < 745px) {
-  .about {
-    height: 140vh;
-  }
-}
-@media screen and (width < 378px) and (height < 745px) {
-  .about {
-    height: 150vh;
   }
 }

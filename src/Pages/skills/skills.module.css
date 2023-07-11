@@ -15,12 +15,14 @@
   left: 0;
   width: 100vw;
   min-height: 100vh;
+  height: fit-content;
   background: #e0dfda;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
   overflow-x: hidden;
-  padding-bottom: 20px;
+  padding-block: 1%;
   gap: 2%;
 }
 .firstlayer {

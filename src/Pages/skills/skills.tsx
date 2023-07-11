@@ -6,20 +6,20 @@ import { Link } from "react-router-dom";
 import { MAP } from "./brain";
 import ImageMapper from "react-img-mapper";
 import Brain from "../../assets/images/brain.png";
-import { UseAnimateBlob, UseResize } from "../../Functions/CustomHooks";
+import { UseResize } from "../../Functions/CustomHooks";
 
 function defaultSkillColor() {
   return new Map([
     ["figma", "#121212"],
     ["css", "#121212"],
-    ["DSAL", "#121212"],
+    ["puppeteer", "#121212"],
     ["react", "#121212"],
     ["node", "#121212"],
     ["mongodb", "#121212"],
     ["express", "#121212"],
     ["libraries", "#121212"],
     ["tailwind", "#121212"],
-    ["typescript", "#121212"],
+    ["svelte", "#121212"],
     ["html", "#121212"],
   ]);
 }
@@ -29,7 +29,6 @@ export default function Skills() {
     useState<Map<string, string>>(defaultSkillColor);
   let [skills, Animate] = useState<string>("Skills");
   let width = UseResize();
-  const blob = UseAnimateBlob();
   return (
     <m.div
       initial={{ y: "100%" }}
@@ -82,8 +81,8 @@ export default function Skills() {
             <span style={{ color: `${MapOfSkills.get("tailwind")}` }}>
               Tailwind
             </span>
-            <span style={{ color: `${MapOfSkills.get("typescript")}` }}>
-              Typescript
+            <span style={{ color: `${MapOfSkills.get("svelte")}` }}>
+              sveltekit
             </span>
             <span style={{ color: `${MapOfSkills.get("react")}` }}>
               React Js
@@ -106,15 +105,16 @@ export default function Skills() {
             <span>React Query</span>
             <span>Mongoose</span>
             <span>Zustand</span>
-            <span>Jotai</span>
+            <span>Typescript</span>
             <span>React Motion</span>
+            <span>Axios</span>
             <span>Jest</span>
           </div>
           <div className={styles.sections}>
             <h3>Other Skills 10%</h3>
             <span style={{ color: `${MapOfSkills.get("figma")}` }}> Figma</span>
-            <span style={{ color: `${MapOfSkills.get("DSAL")}` }}>
-              Data Structures
+            <span style={{ color: `${MapOfSkills.get("puppeteer")}` }}>
+              Puppeteer
             </span>
           </div>
         </div>

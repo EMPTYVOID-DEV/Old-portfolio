@@ -71,19 +71,11 @@ export default function Projects() {
           }}
         ></a>
         <a
-          href="https://github.com/Shinji13/NodeJs_Streams"
+          href="https://github.com/Shinji13/RythmeSvelte"
           target="_blank"
           className={style.shape}
           onMouseEnter={() => {
-            Appear("NodeJs Streams From Scratch");
-          }}
-        ></a>
-        <a
-          href="https://github.com/Shinji13/XenosPortoflio"
-          target="_blank"
-          className={style.shape}
-          onMouseEnter={() => {
-            Appear("Xenos Portoflio");
+            Appear("PolyRhythms");
           }}
         ></a>
         <a
@@ -95,11 +87,19 @@ export default function Projects() {
           }}
         ></a>
         <a
-          href="https://github.com/Shinji13/chatApp"
+          href="https://github.com/Shinji13/multiLayerPerceptron"
           target="_blank"
           className={style.shape}
           onMouseEnter={() => {
-            Appear("Live Chat Application");
+            Appear("Neural network constructor");
+          }}
+        ></a>
+        <a
+          href=""
+          target="_blank"
+          className={style.shape}
+          onMouseEnter={() => {
+            Appear("");
           }}
         ></a>
         <a

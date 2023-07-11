@@ -1,23 +1,4 @@
-import { useRef, useEffect, useState } from "react";
-
-export function UseAnimateBlob() {
-  const blob = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const track = (event: PointerEvent) => {
-      let { clientX, clientY } = event;
-      blob.current?.animate(
-        { top: `${clientY + 40}px`, left: `${clientX + 40}px` },
-        { duration: 2000, fill: "forwards" }
-      );
-    };
-    document.body.addEventListener("pointermove", track);
-    return () => {
-      removeEventListener("pointermove", track);
-    };
-  }, []);
-  return blob;
-}
+import { useEffect, useState } from "react";
 
 export function UseResize() {
   const [width, setWidth] = useState(560);
@@ -64,7 +45,7 @@ export function changeMorph() {
     const Timer = setInterval(() => {
       let index = Math.floor(Math.random() * 6);
       setMorph(Morphs[index]);
-    }, 2000);
+    }, 1000);
     return () => {
       clearInterval(Timer);
     };

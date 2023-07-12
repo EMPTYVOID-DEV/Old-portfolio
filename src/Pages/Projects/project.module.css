@@ -32,7 +32,7 @@
   white-space: break-spaces;
   text-transform: uppercase;
   text-align: center;
-  font-size: clamp(28px, calc(12.6px+4.07vw), 42px);
+  font-size: 20px;
   text-align: center;
   color: #e2a115;
 }

@@ -1,12 +1,12 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./HomeV2.module.css";
 import main from "../../assets/images/main.jpg";
 import { motion as m } from "framer-motion";
 import { Link } from "react-router-dom";
+import NavBar from "../navBar/navBar";
 
 export default function HomeV2() {
   const [imgStyle, animateImg] = useState<boolean>(true);
-  const mediaQuery = useRef<any>(null);
   useEffect(() => {
     let timer = setTimeout(() => {
       animateImg(false);
@@ -28,7 +28,6 @@ export default function HomeV2() {
           animateImg(!imgStyle);
         }}
       ></i>
-
       <m.img className={imgStyle ? styles.imgView : styles.img} src={main} />
       <div className={styles.navBar}>
         <Link to="/" reloadDocument className={styles.tag}>
@@ -53,47 +52,7 @@ export default function HomeV2() {
             </m.span>
           </div>
         </Link>
-        <i
-          className="fa-solid fa-bars"
-          id={styles.toggle}
-          onClick={() => {
-            mediaQuery.current.style.right = "0";
-          }}
-          style={{ color: `${imgStyle ? "#e2a115" : ""}` }}
-        ></i>
-        <div className={styles.NavSections} ref={mediaQuery}>
-          <Link
-            to="/About"
-            className={imgStyle ? styles.sectionBlack : styles.section}
-          >
-            About
-          </Link>
-          <Link
-            to="/Skill"
-            className={imgStyle ? styles.sectionBlack : styles.section}
-          >
-            Skills
-          </Link>
-          <Link
-            to="/Project"
-            className={imgStyle ? styles.sectionBlack : styles.section}
-          >
-            Projects
-          </Link>
-          <Link
-            to="/Contact"
-            className={imgStyle ? styles.sectionBlack : styles.section}
-          >
-            Contact Me
-          </Link>
-          <i
-            className="fa-solid fa-xmark"
-            id={styles.close}
-            onClick={() => {
-              mediaQuery.current.style.right = "-200%";
-            }}
-          ></i>
-        </div>
+        <NavBar />
       </div>
       <div className={styles.middleSection}>
         <div className={styles.leftside}>

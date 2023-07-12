@@ -1,15 +1,18 @@
 .Contact {
-  background-color: #e0dfda;
+  background-color: #1c1d20;
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-  height: 200vh;
+  height: fit-content;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   overflow-x: hidden;
-  gap: 5%;
+  box-sizing: content-box;
+  padding-block: 20px;
+  gap: 4rem;
 }
 .Contact > h1:first-of-type {
   font-family: versus;
@@ -43,7 +46,7 @@
   text-transform: uppercase;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #e2a115;
+  -webkit-text-stroke-color: #e0dfda;
   font-size: clamp(1.125rem, 0.65vw + 0.978rem, 1.5rem);
 }
 .firstlayer > div:last-child h1 {
@@ -51,229 +54,186 @@
   font-weight: bolder;
   letter-spacing: 2px;
   text-transform: uppercase;
-  -webkit-text-fill-color: #e2a115;
+  -webkit-text-fill-color: #e0dfda;
   font-size: clamp(1.125rem, 0.65vw + 0.978rem, 1.5rem);
 }
-.EmailContact {
+
+.Contact > .main {
   width: 100%;
-  height: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#Img {
-  display: inline-block;
-  width: 50%;
-  aspect-ratio: 1.618;
-  padding-left: 1%;
-  padding-right: 2%;
-}
-
-#Contact_form {
-  width: 46%;
   display: grid;
-  grid-template-columns: auto auto;
-  gap: clamp(5px, 0.5vw, 8px);
-  padding-right: clamp(18px, 5vw, 60px);
+  grid-template-columns: 70% 30%;
 }
 
-#Contact_form > textarea {
-  grid-column: span 2;
-  height: 30vh;
+.Contact > .main > .imgContainer {
+  min-width: 80px;
+  width: 30%;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  background-image: url("../../assets/images/aymen&nazim.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-#Contact_form > input {
-  height: clamp(3.5rem, 3vh, 7rem);
-}
-
-#Contact_form > input,
-#Contact_form > textarea {
-  width: 100%;
-  background: #e2a115;
-  border: 2px solid #121212;
-  border-radius: 20px;
-  color: #fff;
-  margin: 0 0 8px 0;
-  padding: 18px 26px;
-  font-weight: 500;
-  font-size: clamp(6px, 2.5vw, 18px);
-  letter-spacing: 0.8px;
-  transition: 0.3s ease-in-out;
-}
-
-#Contact_form > input:focus,
-#Contact_form > textarea:focus {
-  background: rgba(255, 255, 255, 1);
-  color: #121212;
-}
-#Contact_form > input::placeholder,
-textarea::placeholder {
-  font-size: 16px;
-  font-weight: 400;
-  color: #fff;
-}
-#Contact_form > input:focus::placeholder,
-#Contact_form > textarea:focus::placeholder {
-  color: #121212;
-  opacity: 0.8;
-}
-#Contact_form > #send,
-#Contact_form > #reset {
-  font-weight: 700;
-  color: #000;
-  background-color: #e0dfda;
-  padding: 14px 48px;
-  font-size: 18px;
-  margin-top: 25px;
-  border-radius: 0;
-  position: relative;
-  transition: 0.2s ease-in-out;
-}
-
-#Contact_form > #send:hover,
-#Contact_form > #reset:hover {
-  color: #fff;
-  background-color: #121212;
-}
-
-.social {
-  width: 100%;
-  height: 20%;
+.Contact > .main > h1 {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-}
-.social > h2 {
-  font-family: fantasy;
+  flex-direction: column;
+  justify-self: center;
+  font-family: versus;
   font-weight: bolder;
+  font-size: calc(clamp(1.6rem, 5vw, 8rem) * 0.775);
+  color: #e0dfda;
   letter-spacing: 2px;
-  white-space: break-spaces;
-  text-transform: uppercase;
-  text-align: center;
-  font-size: clamp(18px, calc(16px+4.08vw), 24px);
-  text-align: center;
-  color: #121212;
-}
-.social > .svgContainer {
-  width: 20%;
-  height: 100%;
+  margin-bottom: 15%;
 }
 
-.social > .svgContainer > svg {
-  width: 100%;
-  height: 100%;
-  transform: rotateZ(15deg) translateY(-10px);
-}
-
-.social > .medias {
-  width: 20%;
+.Contact > .main > .info {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-direction: column;
 }
 
-.lastlayer {
-  display: flex;
-  width: 100%;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-block: auto;
-  height: 15%;
+.Contact > .main > .info > h3 {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #e2a115;
 }
-.lastlayer > .button {
+
+.Contact > .main > .info > div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  gap: 4px;
+}
+
+.Contact > .main > .info span {
+  color: #ededed;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.Contact > .main > .info a {
+  text-decoration: none;
+  color: #ededed;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
   width: fit-content;
+  transition: all 200ms linear;
+  position: relative;
+}
+.Contact > .main > .info a::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  border-radius: 50%;
+  transition: all 300ms ease-in-out;
+  background-color: #ededed;
+}
+.Contact > .main > .info a:hover::after {
+  width: 100%;
+}
+
+.Contact > .main > form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.Contact > .main > form > .field:first-child {
+  border-top: 0.5px solid #e0dfda50;
+  border-bottom: 0.5px solid #e0dfda50;
+}
+
+.Contact > .main > form > .field:last-child {
+  border-bottom: none;
+}
+
+.Contact > .main > form > .field {
+  width: 65%;
+  border-bottom: 0.5px solid #e0dfda50;
+  display: grid;
+  grid-template-columns: 10% 90%;
+  padding-bottom: 5px;
+}
+
+.Contact > .main > form > .field > h3 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #e0dfda;
+  opacity: 0.6;
+  grid-row: span 2;
+  align-self: center;
+}
+
+.Contact > .main > form > .field :focus > label {
+  opacity: 0.6;
+}
+
+.Contact > .main > form > .field > label {
+  font-size: calc(clamp(1.4rem, 4vw, 1.5rem) * 0.775);
+  font-weight: bolder;
+  color: #e2a115;
+  align-self: flex-end;
+  display: flex;
+  align-items: flex-end;
+  height: 80px;
+}
+
+.Contact > .main > form > .field > input,
+.Contact > .main > form > .field > textarea {
+  background-color: transparent !important;
+  border: none;
+  outline: none;
+  color: #e0dfda;
+  font-size: calc(clamp(1.1rem, 4vw, 1.5rem) * 0.775);
+  font-weight: bold;
+  resize: none;
+  overflow: hidden;
+  -webkit-appearance: none;
+  box-shadow: none;
+  height: 40px;
+}
+
+.Contact > .main > form > .field > input::placeholder {
+  color: #e0dfda;
+  opacity: 0.6;
+}
+
+.Contact > .main > form > button {
+  margin-top: 20px;
+  width: 60%;
   height: fit-content;
+  padding-block: 0.5rem;
+  padding-inline: 2rem;
+  border-radius: 4px;
   display: flex;
   align-items: center;
   letter-spacing: 0.5px;
   justify-content: center;
-  position: relative;
-  font-size: 0.9rem;
+  border: none;
+  outline: none;
   font-weight: bold;
   font-family: versus;
-  color: #121212;
-  padding-inline: 0.2rem;
-  padding-block: 0.4rem;
-  background-color: transparent;
-  border: 0.5px solid #121212;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: clamp(16px, calc(12px+0.46vw), 18px);
-}
-.lastlayer > .button::before {
-  content: "";
-  display: inline-block;
-  width: 0;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transition: all 300ms 0s ease;
+  color: #e0dfda;
   background-color: #e2a115;
-  border-radius: 0.5px;
-  z-index: -1;
-}
-.lastlayer > .button:hover::before {
-  width: 100%;
-}
-.lastlayer > .button:hover {
-  border: 0.5px solid #121212;
-  color: #fff;
+  cursor: pointer;
+  font-size: clamp(18px, calc(12px + 1.46vw), 24px);
 }
 
-@media screen and (max-width: 960px) {
-  .Contact > h2:first-of-type {
-    font-size: 28px;
+@media screen and (width <630px) {
+  .Contact > .main > form {
+    grid-column: span 2;
+    order: 4;
   }
-}
-@media screen and (max-width: 760px) {
-  .Contact > h2:first-of-type {
-    font-size: 24px;
-  }
-  .social > .medias {
-    width: 30%;
-  }
-}
-@media screen and (max-width: 650px) {
-  .Contact {
-    height: 220vh;
-  }
-  .Contact > h2:first-of-type {
-    font-size: 20px;
-  }
-  #Img {
-    display: none;
-  }
-  #Contact_form {
-    width: 80%;
-    display: grid;
-    grid-template-columns: auto auto;
-    gap: clamp(5px, 0.5vw, 8px);
-    padding-right: clamp(18px, 5vw, 60px);
-  }
-  .social > .medias img {
-    width: 2.4rem;
-    aspect-ratio: 1/1;
-  }
-  .social > .svgContainer {
-    width: 40%;
-    height: 100%;
-  }
-  .social > .svgContainer {
-    width: 35%;
-    height: 100%;
-  }
-  .social {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .social > .svgContainer > svg {
-    transform: rotateZ(-30deg);
-  }
-
-  .social > h2 {
-    font-size: 18px;
+  .Contact > .main > .info {
+    justify-self: center;
   }
 }

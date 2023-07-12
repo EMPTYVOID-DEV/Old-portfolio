@@ -181,4 +181,7 @@
   .BrainSet > .leftside > .sections > h3 {
     font-size: clamp(20px, calc(6px+1.4vw), 32px);
   }
+  .lastlayer > .button {
+    font-size: 14px;
+  }
 }

@@ -1,5 +1,5 @@
 import "./About.css";
-import PersonalImg from "../../assets/images/aymen&nazim.jpg";
+import PersonalImg from "../../assets/images/aymen&nazim.png";
 import { motion as m } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";

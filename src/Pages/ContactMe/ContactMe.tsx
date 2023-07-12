@@ -7,35 +7,42 @@ import emailjs from "@emailjs/browser";
 import { Link } from "react-router-dom";
 import { motion as m } from "framer-motion";
 import { Hack } from "../../Functions/utlity";
-import discord from "../../assets/images/discord.svg";
-import linkdin from "../../assets/images/linkdin.svg";
-import twitter from "../../assets/images/twitter.svg";
 
 export default function Contact() {
-  const form = useRef<any>();
-  const [SendWord, SetWord] = useState("Send");
-  const [ContactImg, SetImg] = useState(SayHi);
+  const fields = [
+    { placeholder: "mohammad amin", label: "What's your name?", name: "name" },
+    {
+      placeholder: "mohammad@gmail.com",
+      label: "What's your email?",
+      name: "email",
+    },
+    {
+      placeholder: "Web Development,Web Design",
+      label: "What services are you looking for?",
+      name: "subject",
+    },
+    {
+      placeholder: "mohammad enterprise",
+      label: "What's your organization name?",
+      name: "company",
+    },
+    {
+      placeholder: "Hello aymen can you help me with",
+      label: "Your message",
+      name: "message",
+    },
+  ];
+  const form = useRef<HTMLFormElement>(null);
   let [contact, Animate] = useState<string>("Contact Me");
 
   const sendEmail = async (e) => {
     e.preventDefault();
-    SetWord("Sending");
-    await emailjs
-      .sendForm(
-        "service_1mq0vw9",
-        "template_grx5z2m",
-        form.current,
-        "izrbZm5kyHwl1s3sT"
-      )
-      .then(
-        (result) => {
-          SetImg(MsgSend);
-        },
-        (error) => {
-          SetImg(Error);
-        }
-      );
-    SetWord("Send");
+    await emailjs.sendForm(
+      import.meta.env.VITE_EMAIL_JS_SERVICE_ID,
+      import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID,
+      form.current as HTMLFormElement,
+      import.meta.env.VITE_PUBLIC_KEY
+    );
   };
   return (
     <m.div
@@ -79,81 +86,64 @@ export default function Contact() {
           </m.h1>
         </div>
       </div>
-      <h1>Feel Free to communicate</h1>
-      <div className={styles.EmailContact}>
-        <img src={ContactImg} alt="Something did go wrong" id={styles.Img} />
-        <form ref={form} onSubmit={sendEmail} id={styles.Contact_form}>
-          <input
-            type="text"
-            name="First_name"
-            required
-            placeholder="First Name"
-          />
-          <input
-            type="text"
-            name="Last_name"
-            required
-            placeholder="Last Name"
-          />
-          <input type="email" name="User_Email" required placeholder="Email" />
-          <input type="number" name="Phone_Number" placeholder="Phone No." />
-          <textarea name="message" required placeholder="message" />
-          <input type="submit" value={SendWord} id={styles.send} />
-          <input
-            type="reset"
-            value="Rest"
-            id={styles.reset}
-            onClick={() => {
-              SetImg(SayHi);
-            }}
-          />
+      <div className={styles.main}>
+        <h1>
+          <span>Let's start a</span>
+          <span>project together</span>
+        </h1>
+        <div className={styles.imgContainer}></div>
+        <form className={styles.form} ref={form}>
+          {fields.map((field, index) => (
+            <div className={styles.field}>
+              <h3>0{index}</h3>
+              <label htmlFor="">{field.label}</label>
+              {index == fields.length - 1 ? (
+                <textarea
+                  required
+                  placeholder={field.placeholder}
+                  name={field.name}
+                />
+              ) : (
+                <input
+                  type="text"
+                  name={field.name}
+                  required
+                  placeholder={field.placeholder}
+                ></input>
+              )}
+            </div>
+          ))}
+          <button type="submit" onClick={(evt) => sendEmail(evt)}>
+            Send
+          </button>
         </form>
-      </div>
-      <div className={styles.social}>
-        <h2>Follow me on social media</h2>
-        <div className={styles.svgContainer}>
-          <svg
-            preserveAspectRatio="xMidYMax meet"
-            viewBox="0 0 372 138"
-            fill="none"
-          >
-            <path
-              d="M371.609 0.652252L356.402 8.94317L371.185 17.9676L371.609 0.652252ZM363.309 11.3709C285.864 131.512 126.895 170.91 1.75003 98.6576L0.250031 101.256C126.787 174.312 287.523 134.475 365.831 12.9963L363.309 11.3709Z"
-              fill="#121212"
-            />
-          </svg>
-        </div>
-        <div className={styles.medias}>
-          <a
-            target={"_blank"}
-            href={"https://www.linkedin.com/in/aizen-soskue-750b96260/"}
-          >
-            <img src={linkdin} className={styles.media} />
-          </a>
-          <a target={"_blank"} href={"https://twitter.com/soskue_aizen"}>
-            <img src={twitter} className={styles.media} />
-          </a>
-          <a
-            href="https://discordapp.com/users/577891074236743690"
-            target={"_blank"}
-          >
-            <img src={discord} className={styles.media} />
-          </a>
+        <div className={styles.info}>
+          <h3>Contact details</h3>
+          <div>
+            <span>keskasaymen08@gmail.com</span>
+            <span>+213 775210076</span>
+            <span>19107 algeria</span>
+          </div>
+          <h3>Socials</h3>
+          <div className={styles.social}>
+            <a
+              target={"_blank"}
+              href={"https://www.linkedin.com/in/aizen-soskue-750b96260/"}
+            >
+              Linkedin
+            </a>
+            <a target={"_blank"} href={"https://twitter.com/soskue_aizen"}>
+              Twitter
+            </a>
+            <a
+              href="https://discordapp.com/users/577891074236743690"
+              target={"_blank"}
+            >
+              Discord
+            </a>
+          </div>
         </div>
       </div>
-      <m.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ ease: "easeOut", delay: 0.5, duration: 1.2 }}
-        className={styles.lastlayer}
-      >
-        <Link to="/" className={styles.button}>
-          Back to Home
-        </Link>
-        <Link to="/About" className={styles.button}>
-          Preceed to Next Section
-        </Link>
-      </m.div>
     </m.div>
   );
 }

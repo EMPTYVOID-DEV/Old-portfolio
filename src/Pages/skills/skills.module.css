@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: space-between;
   overflow-x: hidden;
-  padding-block: 1%;
+  padding-block: 10px;
   gap: 2%;
 }
 .firstlayer {
@@ -101,7 +101,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #121212;
-  font-size: clamp(22px, calc(8.6px+2.07vw), 42px);
+  font-size: clamp(18px, calc(16px + 1vw), 24px);
 }
 .BrainSet > .leftside > .sections > span {
   font-family: Arial, Helvetica, sans-serif;
@@ -109,7 +109,7 @@
   letter-spacing: 2px;
   white-space: break-spaces;
   color: #121212;
-  font-size: clamp(16px, calc(12px+0.46vw), 18px);
+  font-size: clamp(16px, calc(12px + 0.8vw), 18px);
 }
 
 .lastlayer {
@@ -136,7 +136,7 @@
   border: 0.5px solid #121212;
   border-radius: 5px;
   cursor: pointer;
-  font-size: clamp(16px, calc(12px+0.46vw), 18px);
+  font-size: clamp(16px, calc(12px + 0.46vw), 18px);
 }
 .lastlayer > .button::before {
   content: "";
@@ -179,7 +179,7 @@
     padding-left: 12%;
   }
   .BrainSet > .leftside > .sections > h3 {
-    font-size: clamp(20px, calc(6px+1.4vw), 32px);
+    font-size: clamp(20px, calc(6px + 1.4vw), 32px);
   }
   .lastlayer > .button {
     font-size: 14px;

@@ -120,7 +120,7 @@ export default function Skills() {
         <ImageMapper
           imgWidth={967}
           width={width}
-          src="/public/brain.png"
+          src="/brain.png"
           map={MAP}
           onMouseEnter={(area) => {
             const newmap = defaultSkillColor();

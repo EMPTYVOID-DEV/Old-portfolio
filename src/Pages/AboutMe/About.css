@@ -11,7 +11,7 @@
   justify-content: space-between;
   align-items: center;
   box-sizing: content-box;
-  padding-block: 2%;
+  padding-block: 20px;
   gap: 1%;
 }
 div {
@@ -83,7 +83,8 @@ div {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #121212;
-  font-size: clamp(25px, calc(8.6px+3.07vw), 48px);
+  font-size: clamp(25px, calc(8.6px + 3.07vw), 48px);
+  margin-bottom: 10px;
 }
 .middlelayer > .Content > p {
   font-family: Arial, Helvetica, sans-serif;
@@ -91,7 +92,7 @@ div {
   letter-spacing: 2px;
   white-space: break-spaces;
   color: #121212;
-  font-size: clamp(16px, calc(12px+0.46vw), 18px);
+  font-size: clamp(16px, calc(12px + 0.46vw), 18px);
 }
 .middlelayer > .Content > span {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -100,7 +101,7 @@ div {
   letter-spacing: 2px;
   white-space: break-spaces;
   color: #e2a115;
-  font-size: clamp(16px, calc(12px+0.46vw), 18px);
+  font-size: clamp(16px, calc(12px + 0.46vw), 18px);
 }
 .lastlayer {
   display: flex;
@@ -127,7 +128,7 @@ div {
   border: 0.5px solid #121212;
   border-radius: 5px;
   cursor: pointer;
-  font-size: clamp(16px, calc(12px+0.46vw), 18px);
+  font-size: clamp(16px, calc(12px + 0.46vw), 18px);
 }
 .lastlayer > .button::before {
   content: "";
@@ -169,7 +170,7 @@ div {
   font-weight: 800;
   letter-spacing: 2px;
   white-space: break-spaces;
-  font-size: clamp(14px, calc(13px+0.46vw), 18px);
+  font-size: clamp(14px, calc(13px + 0.46vw), 18px);
 }
 
 @media screen and (width <860px) {

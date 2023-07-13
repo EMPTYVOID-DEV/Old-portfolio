@@ -11,7 +11,7 @@
   justify-content: space-evenly;
   overflow-x: hidden;
   box-sizing: content-box;
-  padding-block: 2%;
+  padding-block: 20px;
   gap: 2%;
 }
 .projects > h1:first-of-type {
@@ -32,7 +32,7 @@
   white-space: break-spaces;
   text-transform: uppercase;
   text-align: center;
-  font-size: 20px;
+  font-size: clamp(16px, 14px + 1.2vw, 20px);
   text-align: center;
   color: #e2a115;
 }

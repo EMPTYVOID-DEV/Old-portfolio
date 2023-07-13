@@ -1,5 +1,4 @@
 import "./About.css";
-import PersonalImg from "../../assets/images/aymen&nazim.png";
 import { motion as m } from "framer-motion";
 import { Link } from "react-router-dom";
 import { useState } from "react";
@@ -55,7 +54,7 @@ export default function AboutMe() {
             initial={{ height: "0" }}
             animate={{ height: "300px" }}
             transition={{ ease: "easeOut", delay: 0.5, duration: 1 }}
-            src={PersonalImg}
+            src="/aymen&nazim.png"
             alt="Personal img"
           />
         </div>

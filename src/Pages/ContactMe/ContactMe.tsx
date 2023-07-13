@@ -1,7 +1,4 @@
 import { useRef, useState } from "react";
-import SayHi from "../../assets/images/SendMsg.svg";
-import MsgSend from "../../assets/images/MsgSend.svg";
-import Error from "../../assets/images/Error.svg";
 import styles from "./Contact.module.css";
 import emailjs from "@emailjs/browser";
 import { Link } from "react-router-dom";

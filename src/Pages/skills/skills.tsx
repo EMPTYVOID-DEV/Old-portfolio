@@ -5,7 +5,6 @@ import { Hack } from "../../Functions/utlity";
 import { Link } from "react-router-dom";
 import { MAP } from "./brain";
 import ImageMapper from "react-img-mapper";
-import Brain from "../../assets/images/brain.png";
 import { UseResize } from "../../Functions/CustomHooks";
 
 function defaultSkillColor() {
@@ -121,7 +120,7 @@ export default function Skills() {
         <ImageMapper
           imgWidth={967}
           width={width}
-          src={Brain}
+          src="/public/brain.png"
           map={MAP}
           onMouseEnter={(area) => {
             const newmap = defaultSkillColor();

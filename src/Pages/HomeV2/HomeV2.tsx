@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import styles from "./HomeV2.module.css";
-import main from "../../assets/images/main.jpg";
 import { motion as m } from "framer-motion";
 import { Link } from "react-router-dom";
 import NavBar from "../navBar/navBar";
@@ -8,8 +7,9 @@ import NavBar from "../navBar/navBar";
 export default function HomeV2() {
   const [imgStyle, animateImg] = useState<boolean>(true);
   useEffect(() => {
+    const isMobile = window.matchMedia("(width<440px)");
     let timer = setTimeout(() => {
-      animateImg(false);
+      if (!isMobile.matches) animateImg(false);
     }, 1650);
     return () => {
       clearTimeout(timer);
@@ -28,7 +28,10 @@ export default function HomeV2() {
           animateImg(!imgStyle);
         }}
       ></i>
-      <m.img className={imgStyle ? styles.imgView : styles.img} src={main} />
+      <m.img
+        className={imgStyle ? styles.imgView : styles.img}
+        src="/main.jpg"
+      />
       <div className={styles.navBar}>
         <Link to="/" reloadDocument className={styles.tag}>
           <div>

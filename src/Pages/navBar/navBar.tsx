@@ -36,7 +36,7 @@ export default function NavBar() {
           </div>
         </div>
         <div className={styles.social}>
-          <h3>Social</h3>
+          <h3>Socials</h3>
           <div className={styles.sections}>
             <a
               target={"_blank"}
@@ -47,11 +47,8 @@ export default function NavBar() {
             <a target={"_blank"} href={"https://twitter.com/soskue_aizen"}>
               Twitter
             </a>
-            <a
-              href="https://discordapp.com/users/577891074236743690"
-              target={"_blank"}
-            >
-              Discord
+            <a href="https://github.com/Shinji13" target={"_blank"}>
+              Github
             </a>
           </div>
         </div>

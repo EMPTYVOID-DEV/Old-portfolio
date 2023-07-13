@@ -132,11 +132,8 @@ export default function Contact() {
             <a target={"_blank"} href={"https://twitter.com/soskue_aizen"}>
               Twitter
             </a>
-            <a
-              href="https://discordapp.com/users/577891074236743690"
-              target={"_blank"}
-            >
-              Discord
+            <a href="https://github.com/Shinji13" target={"_blank"}>
+              Github
             </a>
           </div>
         </div>

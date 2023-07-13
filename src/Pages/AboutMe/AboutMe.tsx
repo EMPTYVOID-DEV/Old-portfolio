@@ -54,7 +54,7 @@ export default function AboutMe() {
             initial={{ height: "0" }}
             animate={{ height: "300px" }}
             transition={{ ease: "easeOut", delay: 0.5, duration: 1 }}
-            src="/aymen&nazim.png"
+            src="/AboutPic.png"
             alt="Personal img"
           />
         </div>

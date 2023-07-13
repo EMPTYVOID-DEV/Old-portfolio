@@ -58,14 +58,12 @@ div {
   gap: 3%;
 }
 .middlelayer > .ImgContainer {
-  border: 2px solid #121212;
   border-radius: 2px;
-  width: 50%;
+  width: fit-content;
+  background-color: transparent;
 }
 .middlelayer > .ImgContainer > img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   position: relative;
   top: -1.5%;
@@ -185,9 +183,6 @@ div {
   }
   .middlelayer > .Content {
     gap: 10%;
-  }
-  .middlelayer > .ImgContainer {
-    width: 70%;
   }
   .middlelayer > .Content {
     width: 70%;

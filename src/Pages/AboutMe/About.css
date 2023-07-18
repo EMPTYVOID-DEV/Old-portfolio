@@ -87,10 +87,10 @@ div {
 .middlelayer > .Content > p {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 600;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   white-space: break-spaces;
   color: #121212;
-  font-size: clamp(16px, calc(12px + 0.46vw), 18px);
+  font-size: clamp(15px, calc(12px + 0.46vw), 18px);
 }
 .middlelayer > .Content > span {
   font-family: Verdana, Geneva, Tahoma, sans-serif;

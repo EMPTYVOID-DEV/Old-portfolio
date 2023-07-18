@@ -18,9 +18,11 @@
     transform: translateY(0) rotateY(-13deg);
   }
 }
+
 body {
   overflow-x: hidden;
 }
+
 * {
   margin: 0;
   padding: 0;

@@ -69,11 +69,12 @@ export default function AboutMe() {
             </m.h2>
           </div>
           <p>
-            My name is Aymen Keskas a 20 year old web developer lives in
-            algeria.I bring creativity in design and precision in solving
-            problems furthermore Building large infrastructure with nodeJs is my
-            passion.I want to share my experience with people and work with them
-            to deliver our best to society.
+            I am a highly creative and solution-oriented web developer with a
+            passion for building robust infrastructures using Node.js. With a
+            strong focus on design and problem-solving, I brings a unique
+            perspective to every project.I hold a bachelor's degree in computer
+            science and is currently pursuing a master's degree at Farhat Abbas
+            University.
           </p>
           <span>Why hiring me?</span>
           <div className="skills">

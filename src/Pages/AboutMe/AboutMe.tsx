@@ -73,8 +73,8 @@ export default function AboutMe() {
             passion for building robust infrastructures using Node.js. With a
             strong focus on design and problem-solving, I brings a unique
             perspective to every project.I hold a bachelor's degree in computer
-            science and is currently pursuing a master's degree at Farhat Abbas
-            University.
+            science and I am currently pursuing a master's degree at Farhat
+            Abbas University.
           </p>
           <span>Why hiring me?</span>
           <div className="skills">

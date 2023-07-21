@@ -129,7 +129,7 @@ export default function Contact() {
             >
               Linkedin
             </a>
-            <a target={"_blank"} href={"https://twitter.com/soskue_aizen"}>
+            <a target={"_blank"} href="https://www.linkedin.com/in/aymen-keskas">
               Twitter
             </a>
             <a href="https://github.com/Shinji13" target={"_blank"}>

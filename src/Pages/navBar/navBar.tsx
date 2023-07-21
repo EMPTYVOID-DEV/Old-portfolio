@@ -39,8 +39,7 @@ export default function NavBar() {
           <h3>Socials</h3>
           <div className={styles.sections}>
             <a
-              target={"_blank"}
-              href={"https://www.linkedin.com/in/aizen-soskue-750b96260/"}
+              target={"_blank"}              href="https://www.linkedin.com/in/aymen-keskas"
             >
               Linkedin
             </a>

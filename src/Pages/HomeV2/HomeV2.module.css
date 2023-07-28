@@ -57,7 +57,7 @@
 .navBar {
   width: 95%;
   height: 80px;
-  border-bottom: 1.2px solid rgba(235, 235, 235, 0.808);
+  border-bottom: 1.8px solid rgba(235, 235, 235, 0.808);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -167,7 +167,7 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ededed;
-  font-size: clamp(26px, calc(18px + 2vw), 38px);
+  font-size: clamp(18px, calc(18px + 2vw), 28px);
 }
 .middleSection > .rightside > div > i {
   font-size: 2rem;

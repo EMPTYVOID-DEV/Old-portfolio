@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-between;
   overflow-x: hidden;
   box-sizing: content-box;
   padding-block: 20px;
@@ -354,6 +354,6 @@
 
 @media screen and (width <460px) {
   .wrapper {
-    width: 66%;
+    width: 80%;
   }
 }

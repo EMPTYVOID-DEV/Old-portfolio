@@ -123,13 +123,12 @@ export default function Contact() {
           </div>
           <h3>Socials</h3>
           <div className={styles.social}>
-            <a
-              target={"_blank"}
-              href={"https://www.linkedin.com/in/aizen-soskue-750b96260/"}
+            <a              target={"_blank"}              
+href="https://www.linkedin.com/in/aymen-keskas"
             >
               Linkedin
             </a>
-            <a target={"_blank"} href={"https://twitter.com/soskue_aizen"}>
+            <a target={"_blank"} href="https://twitter.com/soskue_aizen">
               Twitter
             </a>
             <a href="https://github.com/Shinji13" target={"_blank"}>

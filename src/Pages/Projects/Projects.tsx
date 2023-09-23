@@ -63,11 +63,11 @@ export default function Projects() {
         data-configuration={morph.configuration}
       >
         <a
-          href="https://github.com/Shinji13/NoteApp"
+          href="https://github.com/Shinji13/XStream"
           target="_blank"
           className={style.shape}
           onMouseEnter={() => {
-            Appear("Note App");
+            Appear("XStream");
           }}
         ></a>
         <a
@@ -79,11 +79,11 @@ export default function Projects() {
           }}
         ></a>
         <a
-          href="https://github.com/Shinji13/Mern-Blood-Bank"
+          href="https://github.com/Shinji13/stackSearch"
           target="_blank"
           className={style.shape}
           onMouseEnter={() => {
-            Appear("Blood Bank Management System");
+            Appear("Stack-search");
           }}
         ></a>
         <a
@@ -95,17 +95,17 @@ export default function Projects() {
           }}
         ></a>
         <a
-          href=""
+          href="https://create-split-app.vercel.app/"
           target="_blank"
           className={style.shape}
           onMouseEnter={() => {
-            Appear("");
+            Appear("Create-split-app");
           }}
         ></a>
         <a
-          href=""
+          href="https://github.com/Shinji13/SvelteDocsMaker"
           target="_blank"
-          onMouseEnter={() => Appear("")}
+          onMouseEnter={() => Appear("SvelteDocsMaker")}
           className={style.shape}
         ></a>
         <a

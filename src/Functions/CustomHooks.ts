@@ -45,7 +45,7 @@ export function changeMorph() {
     const Timer = setInterval(() => {
       let index = Math.floor(Math.random() * 6);
       setMorph(Morphs[index]);
-    }, 1000);
+    }, 2000);
     return () => {
       clearInterval(Timer);
     };

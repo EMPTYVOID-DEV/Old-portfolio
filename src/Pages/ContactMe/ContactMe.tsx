@@ -31,15 +31,21 @@ export default function Contact() {
   ];
   const form = useRef<HTMLFormElement>(null);
   let [contact, Animate] = useState<string>("Contact Me");
+  let [sendingState, changeSendingState] = useState<
+    "send" | "sending" | "send failed" | "send successful"
+  >("send");
 
   const sendEmail = async (e) => {
     e.preventDefault();
-    await emailjs.sendForm(
+    changeSendingState("sending");
+    const res = await emailjs.sendForm(
       import.meta.env.VITE_EMAIL_JS_SERVICE_ID,
       import.meta.env.VITE_EMAIL_JS_TEMPLATE_ID,
       form.current as HTMLFormElement,
       import.meta.env.VITE_PUBLIC_KEY
     );
+    if (res.status < 400) changeSendingState("send successful");
+    else changeSendingState("send failed");
   };
   return (
     <m.div
@@ -91,7 +97,7 @@ export default function Contact() {
         <div className={styles.imgContainer}></div>
         <form className={styles.form} ref={form}>
           {fields.map((field, index) => (
-            <div className={styles.field}>
+            <div className={styles.field} key={field.label}>
               <h3>0{index}</h3>
               <label htmlFor="">{field.label}</label>
               {index == fields.length - 1 ? (
@@ -111,7 +117,7 @@ export default function Contact() {
             </div>
           ))}
           <button type="submit" onClick={(evt) => sendEmail(evt)}>
-            Send
+            {sendingState}
           </button>
         </form>
         <div className={styles.info}>
@@ -123,8 +129,9 @@ export default function Contact() {
           </div>
           <h3>Socials</h3>
           <div className={styles.social}>
-            <a              target={"_blank"}              
-href="https://www.linkedin.com/in/aymen-keskas"
+            <a
+              target={"_blank"}
+              href="https://www.linkedin.com/in/aymen-keskas"
             >
               Linkedin
             </a>

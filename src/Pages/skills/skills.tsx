@@ -74,11 +74,11 @@ export default function Skills() {
       <div className={styles.BrainSet}>
         <div className={styles.leftside}>
           <div className={styles.sections}>
-            <h3>Front End 38%</h3>
+            <h3>Front End 42%</h3>
             <span style={{ color: `${MapOfSkills.get("html")}` }}>Html</span>
             <span style={{ color: `${MapOfSkills.get("css")}` }}>Css</span>
             <span style={{ color: `${MapOfSkills.get("tailwind")}` }}>
-              Tailwind
+              Tailwind/Postcss
             </span>
             <span style={{ color: `${MapOfSkills.get("svelte")}` }}>
               sveltekit
@@ -88,10 +88,10 @@ export default function Skills() {
             </span>
           </div>
           <div className={styles.sections}>
-            <h3>Back End 32%</h3>
+            <h3>Back End 30%</h3>
             <span style={{ color: `${MapOfSkills.get("node")}` }}>Node Js</span>
             <span style={{ color: `${MapOfSkills.get("mongodb")}` }}>
-              Mongo DB
+              MongoDb/Postgresql
             </span>
             <span style={{ color: `${MapOfSkills.get("express")}` }}>
               Express Js
@@ -102,15 +102,15 @@ export default function Skills() {
               Famous Skills 20%
             </h3>
             <span>React Query</span>
-            <span>Mongoose</span>
-            <span>Zustand</span>
+            <span>Mongoose/Prisma</span>
+            <span>Zustand/valtio</span>
             <span>Typescript</span>
             <span>React Motion</span>
             <span>Axios</span>
-            <span>Jest</span>
+            <span>Reveal js</span>
           </div>
           <div className={styles.sections}>
-            <h3>Other Skills 10%</h3>
+            <h3>Other Skills 8%</h3>
             <span style={{ color: `${MapOfSkills.get("figma")}` }}> Figma</span>
             <span style={{ color: `${MapOfSkills.get("puppeteer")}` }}>
               Puppeteer

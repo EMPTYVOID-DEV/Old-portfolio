@@ -50,13 +50,7 @@ export default function AboutMe() {
       </div>
       <div className="middlelayer">
         <div className="ImgContainer">
-          <m.img
-            initial={{ height: "0" }}
-            animate={{ height: "300px" }}
-            transition={{ ease: "easeOut", delay: 0.5, duration: 1 }}
-            src="/AboutPic.png"
-            alt="Personal img"
-          />
+          <m.img src="/AboutPic.png" alt="Personal img" />
         </div>
         <div className="Content">
           <div>

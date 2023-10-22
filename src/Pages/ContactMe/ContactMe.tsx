@@ -44,8 +44,11 @@ export default function Contact() {
       form.current as HTMLFormElement,
       import.meta.env.VITE_PUBLIC_KEY
     );
-    if (res.status < 400) changeSendingState("send successful");
+    if (res.status < 1200) changeSendingState("send successful");
     else changeSendingState("send failed");
+    setTimeout(() => {
+      changeSendingState("send");
+    }, 800);
   };
   return (
     <m.div
@@ -123,7 +126,7 @@ export default function Contact() {
         <div className={styles.info}>
           <h3>Contact details</h3>
           <div>
-            <span>keskasaymen08@gmail.com</span>
+            <span>keskasaymen8@gmail.com</span>
             <span>+213 775210076</span>
             <span>19107 algeria</span>
           </div>

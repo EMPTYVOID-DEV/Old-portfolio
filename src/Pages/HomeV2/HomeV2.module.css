@@ -124,7 +124,7 @@
   letter-spacing: 2px;
   white-space: break-spaces;
   text-transform: uppercase;
-  font-size: 90px;
+  font-size: clamp(3rem, calc(3rem + ((1.4vw - 0.475rem) * 3.6207)), 7.2rem);
   text-align: center;
 }
 .middleSection > .leftside > .special > h1 {
@@ -139,7 +139,7 @@
   white-space: break-spaces;
   text-transform: uppercase;
   text-align: center;
-  font-size: 90px;
+  font-size: clamp(3rem, calc(3rem + ((1.4vw - 0.475rem) * 3.6207)), 7.2rem);
   animation: coloring 2s linear 1.5s infinite normal forwards;
 }
 .middleSection > .rightside {
@@ -159,7 +159,11 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #121212;
-  font-size: 34px;
+  font-size: clamp(
+    1.5rem,
+    calc(1.5rem + ((1vw - 0.475rem) * 0.8621)),
+    2.125rem
+  );
 }
 .middleSection > .rightside > div > h3 {
   font-family: versus;
@@ -172,57 +176,7 @@
 .middleSection > .rightside > div > i {
   font-size: 2rem;
 }
-@media screen and (max-width: 1280px) {
-  .middleSection > .leftside > .normal > h1 {
-    font-size: 72px;
-  }
-  .middleSection > .leftside > .special > h1 {
-    font-size: 72px;
-  }
-}
-@media screen and (max-width: 1180px) {
-  .middleSection > .leftside > .normal > h1 {
-    font-size: 68px;
-  }
-  .middleSection > .leftside > .special > h1 {
-    font-size: 68px;
-  }
-}
 
-@media screen and (max-width: 1024px) {
-  .middleSection > .leftside > .normal > h1 {
-    font-size: 64px;
-  }
-  .middleSection > .leftside > .special > h1 {
-    font-size: 64px;
-  }
-  .middleSection > .rightside > div > h1 {
-    font-size: 30px;
-  }
-}
-@media screen and (max-width: 960px) {
-  .middleSection > .leftside > .normal > h1 {
-    font-size: 58px;
-  }
-  .middleSection > .leftside > .special > h1 {
-    font-size: 58px;
-  }
-  .middleSection > .rightside > div > h1 {
-    font-size: 28px;
-  }
-}
-
-@media screen and (max-width: 760px) {
-  .middleSection > .leftside > .normal > h1 {
-    font-size: 48px;
-  }
-  .middleSection > .leftside > .special > h1 {
-    font-size: 48px;
-  }
-  .middleSection > .rightside > div > h1 {
-    font-size: 24px;
-  }
-}
 @media screen and (width <650px) {
   .HomeV2 {
     height: 100vh;
